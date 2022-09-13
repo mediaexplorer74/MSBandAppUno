@@ -173,7 +173,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Microsoft.Band.Uno\Microsoft.Band.Uno.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band.Uno\Microsoft.Band.Uno.csproj">
       <Project>{98977187-0556-4ecd-a867-5fe5dafe508b}</Project>
       <Name>Microsoft.Band.Uno</Name>
     </ProjectReference>
@@ -185,7 +185,7 @@
       <Project>{2b8cfaae-9dd7-4fcd-9157-82effdc64307}</Project>
       <Name>Microsoft.Band.Admin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Microsoft.Band\Microsoft.Band.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band\Microsoft.Band.csproj">
       <Project>{7ac5b21c-e909-4d66-a9bc-f92525720e49}</Project>
       <Name>Microsoft.Band</Name>
     </ProjectReference>

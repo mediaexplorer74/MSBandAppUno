@@ -3,19 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BandCenter.Maui", "BandCenter.Maui\BandCenter.Maui.csproj", "{A52BEAF6-0EA9-4648-8047-7378AA212F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band", "libs\band-sdk\Microsoft.Band\Microsoft.Band.csproj", "{7AC5B21C-E909-4D66-A9BC-F92525720E49}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{F399C21F-8870-45E5-B7CD-40F93500CF31}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band", "..\libs\band-sdk\src\Microsoft.Band\Microsoft.Band.csproj", "{7AC5B21C-E909-4D66-A9BC-F92525720E49}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band.Uno", "..\libs\band-sdk\src\Microsoft.Band.Uno\Microsoft.Band.Uno.csproj", "{98977187-0556-4ECD-A867-5FE5DAFE508B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Uno", "Uno", "{3E4D06C1-560B-4015-80AB-7B2BC13AA769}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band.Uno", "libs\band-sdk\Microsoft.Band.Uno\Microsoft.Band.Uno.csproj", "{98977187-0556-4ECD-A867-5FE5DAFE508B}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BandCenter.Uno.Shared", "BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.shproj", "{6279C845-92F8-4333-AB99-3D213163593C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{FD666E7F-8747-4479-82BA-65E3386EA52C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandCenter.Uno.Droid", "BandCenter.Uno\BandCenter.Uno.Droid\BandCenter.Uno.Droid.csproj", "{B46C2AD1-6719-4EF3-B07D-8300FAD34C1A}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -71,22 +63,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BandCenter.Uno.Skia.Tizen",
 		{2B8CFAAE-9DD7-4FCD-9157-82EFFDC64307} = {2B8CFAAE-9DD7-4FCD-9157-82EFFDC64307}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band.Admin", "..\libs\band-sdk\src\Admin\Microsoft.Band.Admin\Microsoft.Band.Admin.csproj", "{2B8CFAAE-9DD7-4FCD-9157-82EFFDC64307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band.Admin", "libs\band-sdk\Microsoft.Band.Admin\Microsoft.Band.Admin.csproj", "{2B8CFAAE-9DD7-4FCD-9157-82EFFDC64307}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band.Admin.Uno", "..\libs\band-sdk\src\Admin\Microsoft.Band.Admin.Uno\Microsoft.Band.Admin.Uno.csproj", "{5B28E28B-03EE-4441-953B-F20126D5071C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Band.Admin.Uno", "libs\band-sdk\Microsoft.Band.Admin.Uno\Microsoft.Band.Admin.Uno.csproj", "{5B28E28B-03EE-4441-953B-F20126D5071C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Disabled", "Disabled", "{AE970BA8-A50C-4868-BCC7-AB5FFA577585}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{2059024c-3d32-4ed9-8af3-063e3c2cfdcd}*SharedItemsImports = 5
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{4d25b73e-e31f-4e03-ad95-1dc5aca46077}*SharedItemsImports = 5
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{65232eed-0a5a-4b6d-8736-7fa1ffcf2ee9}*SharedItemsImports = 4
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{828f151e-e097-4b1d-92ee-aa5d2a231950}*SharedItemsImports = 4
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{8a1aaecc-43bd-4b2e-8ba6-fc824e71ba22}*SharedItemsImports = 4
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{99146119-1788-4f73-8141-9be9aa72b2de}*SharedItemsImports = 5
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{b46c2ad1-6719-4ef3-b07d-8300fad34c1a}*SharedItemsImports = 4
-		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{eaa317a1-168a-41e7-aa00-900470a1979c}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
@@ -118,38 +101,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Ad-Hoc|ARM64.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.AppStore|ARM.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.AppStore|ARM64.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.AppStore|x64.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.AppStore|x86.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|ARM.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|x64.ActiveCfg = Release|Any CPU
-		{A52BEAF6-0EA9-4648-8047-7378AA212F51}.Release|x86.ActiveCfg = Release|Any CPU
 		{7AC5B21C-E909-4D66-A9BC-F92525720E49}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{7AC5B21C-E909-4D66-A9BC-F92525720E49}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{7AC5B21C-E909-4D66-A9BC-F92525720E49}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
@@ -939,23 +890,20 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{7AC5B21C-E909-4D66-A9BC-F92525720E49} = {F399C21F-8870-45E5-B7CD-40F93500CF31}
-		{98977187-0556-4ECD-A867-5FE5DAFE508B} = {F399C21F-8870-45E5-B7CD-40F93500CF31}
-		{6279C845-92F8-4333-AB99-3D213163593C} = {3E4D06C1-560B-4015-80AB-7B2BC13AA769}
-		{FD666E7F-8747-4479-82BA-65E3386EA52C} = {3E4D06C1-560B-4015-80AB-7B2BC13AA769}
-		{B46C2AD1-6719-4EF3-B07D-8300FAD34C1A} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{65232EED-0A5A-4B6D-8736-7FA1FFCF2EE9} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{828F151E-E097-4B1D-92EE-AA5D2A231950} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{EAA317A1-168A-41E7-AA00-900470A1979C} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{8A1AAECC-43BD-4B2E-8BA6-FC824E71BA22} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{CAC7985F-D75E-43CC-8669-8134EBE849BF} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{2059024C-3D32-4ED9-8AF3-063E3C2CFDCD} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{99146119-1788-4F73-8141-9BE9AA72B2DE} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{4D25B73E-E31F-4E03-AD95-1DC5ACA46077} = {FD666E7F-8747-4479-82BA-65E3386EA52C}
-		{2B8CFAAE-9DD7-4FCD-9157-82EFFDC64307} = {F399C21F-8870-45E5-B7CD-40F93500CF31}
-		{5B28E28B-03EE-4441-953B-F20126D5071C} = {F399C21F-8870-45E5-B7CD-40F93500CF31}
+		{B46C2AD1-6719-4EF3-B07D-8300FAD34C1A} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
+		{65232EED-0A5A-4B6D-8736-7FA1FFCF2EE9} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
+		{EAA317A1-168A-41E7-AA00-900470A1979C} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
+		{8A1AAECC-43BD-4B2E-8BA6-FC824E71BA22} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
+		{CAC7985F-D75E-43CC-8669-8134EBE849BF} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
+		{2059024C-3D32-4ED9-8AF3-063E3C2CFDCD} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
+		{99146119-1788-4F73-8141-9BE9AA72B2DE} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
+		{4D25B73E-E31F-4E03-AD95-1DC5ACA46077} = {AE970BA8-A50C-4868-BCC7-AB5FFA577585}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
+		BandCenter.Uno\BandCenter.Uno.Shared\BandCenter.Uno.Shared.projitems*{828f151e-e097-4b1d-92ee-aa5d2a231950}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

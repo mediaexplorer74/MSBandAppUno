@@ -8,7 +8,7 @@
 			you need to make sure that the version provided here matches https://github.com/novotnyllc/MSBuildSdkExtras/blob/main/Source/MSBuild.Sdk.Extras/DefaultItems/ImplicitPackages.targets#L11.
 			This is not an issue when libraries are referenced through nuget packages. See https://github.com/unoplatform/uno/issues/446 for more details.
 			-->
-      <Version>6.2.11</Version>
+      <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml" Version="2.7.1" />
     <PackageReference Include="Uno.UI" Version="4.1.9" />
@@ -129,19 +129,19 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Microsoft.Band.Uno\Microsoft.Band.Uno.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band.Uno\Microsoft.Band.Uno.csproj">
       <Project>{98977187-0556-4ecd-a867-5fe5dafe508b}</Project>
       <Name>Microsoft.Band.Uno</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Admin\Microsoft.Band.Admin.Uno\Microsoft.Band.Admin.Uno.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band.Admin.Uno\Microsoft.Band.Admin.Uno.csproj">
       <Project>{5b28e28b-03ee-4441-953b-f20126d5071c}</Project>
       <Name>Microsoft.Band.Admin.Uno</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Admin\Microsoft.Band.Admin\Microsoft.Band.Admin.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band.Admin\Microsoft.Band.Admin.csproj">
       <Project>{2b8cfaae-9dd7-4fcd-9157-82effdc64307}</Project>
       <Name>Microsoft.Band.Admin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Microsoft.Band\Microsoft.Band.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band\Microsoft.Band.csproj">
       <Project>{7ac5b21c-e909-4d66-a9bc-f92525720e49}</Project>
       <Name>Microsoft.Band</Name>
     </ProjectReference>
@@ -154,7 +154,6 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="Assets\Fonts\ProjectKSymbolRegular.ttf" />
-    <None Include="BandCenter.Uno.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
