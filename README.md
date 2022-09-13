@@ -19,8 +19,8 @@ Min. Win. os build: 18xxx
 
 ## Bugs / Problems
  
-- Huge codebase... 
-- I idk all solution architecture... 
+- Huge codebase. 
+- Idk all solution architecture... RnD takes a lot of time.
 - The code partially decompiled :( 
 
 
