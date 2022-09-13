@@ -3,9 +3,16 @@
 MSBandCompanionApp : my quick and dirty remake of MicrosoftBandDev/companion-app solution
 
 
+## Screenshots
+
+![Screenshot 1](Images/shot1.png)
+![Screenshot 2](Images/shot2.png)
+
 
 ## Tech. moments
-Min. Win. os build: 18xxx 
+
+- Win. os build: 18362
+- Min. Win. os build: 18362 
 
 
 ## Status
