@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="4.1.9" />
+    <PackageReference Include="Uno.UI" Version="4.4.20" />
     <PackageReference Include="Uno.UI.RemoteControl" Version="4.1.9" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Uno.UI.Adapter.Microsoft.Extensions.Logging" Version="4.1.9" />
     <PackageReference Include="Uno.UniversalImageLoader" Version="1.9.33" />
@@ -102,11 +102,11 @@
       <Project>{98977187-0556-4ecd-a867-5fe5dafe508b}</Project>
       <Name>Microsoft.Band.Uno</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Admin\Microsoft.Band.Admin.Uno\Microsoft.Band.Admin.Uno.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band.Admin.Uno\Microsoft.Band.Admin.Uno.csproj">
       <Project>{5b28e28b-03ee-4441-953b-f20126d5071c}</Project>
       <Name>Microsoft.Band.Admin.Uno</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\libs\band-sdk\src\Admin\Microsoft.Band.Admin\Microsoft.Band.Admin.csproj">
+    <ProjectReference Include="..\..\libs\band-sdk\Microsoft.Band.Admin\Microsoft.Band.Admin.csproj">
       <Project>{2b8cfaae-9dd7-4fcd-9157-82effdc64307}</Project>
       <Name>Microsoft.Band.Admin</Name>
     </ProjectReference>

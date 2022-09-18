@@ -1,6 +1,11 @@
 # MSBandCompanionApp
 
-MSBandCompanionApp : my quick and dirty remake of MicrosoftBandDev/companion-app solution
+MSBandCompanionApp :: my fork of MicrosoftBandDev/companion-app solution
+
+
+## About the original
+
+Microsoft Band. Planned as multi-platform app (UNO Platform used). Draft / Not ready yet.
 
 
 ## Screenshots
@@ -11,16 +16,16 @@ MSBandCompanionApp : my quick and dirty remake of MicrosoftBandDev/companion-app
 
 ## Tech. moments
 
-- Win. os build: 18362
-- Min. Win. os build: 18362 
+- W10M compatibility started to realize... :)
+- Win. os build: 15063 (!)
 
 
 ## Status
 
-- R.E. +- 10%
-- Design - 0%
-- Tech. project - 0 %
-- Dev - 0%
+- R.E. +- 50%
+- Design - 5%
+- Tech. project - 25 %
+- Dev - 20%
 - Intro 0%
 
 
@@ -29,6 +34,7 @@ MSBandCompanionApp : my quick and dirty remake of MicrosoftBandDev/companion-app
 - Huge codebase. 
 - Idk all solution architecture... RnD takes a lot of time.
 - The code partially decompiled :( 
+- Dramatic Blootooth lib uncompatibility with Android platform, so, no multi-platform right now (only UWP...)
 
 
 ## References
