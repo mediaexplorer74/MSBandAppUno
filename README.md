@@ -5,7 +5,7 @@ MSBandCompanionApp :: my fork of MicrosoftBandDev/companion-app solution
 
 ## About the original
 
-Microsoft Band. Planned as multi-platform app (UNO Platform used). Draft / Not ready yet.
+Microsoft Band. Planned as multi-platform app (I m start to port the code into Xamarin Form,,,). Draft / Not ready yet.
 
 
 ## Screenshots
