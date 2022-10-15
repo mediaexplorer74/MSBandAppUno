@@ -70,7 +70,7 @@ using System.Runtime.InteropServices;
 [assembly: InternalsVisibleTo("Microsoft.Band.Admin.Desktop")]
 [assembly: InternalsVisibleTo("Microsoft.Band.Admin.Store")]
 [assembly: InternalsVisibleTo("Microsoft.Band.Admin.Phone")]
-[assembly: InternalsVisibleTo("Microsoft.Band.Admin.Uno")]
+[assembly: InternalsVisibleTo("Microsoft.Band.Admin")]
 [assembly: InternalsVisibleTo("Microsoft.Band.Admin.Windows")]
 [assembly: InternalsVisibleTo("Microsoft.Health.App.Background")]
 [assembly: InternalsVisibleTo("Microsoft.Health.App.Platform.WindowsPhone")]
@@ -87,4 +87,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.4.0.0")]
 
 [assembly: InternalsVisibleTo("Microsoft.Band.Maui")]
-[assembly: InternalsVisibleTo("Microsoft.Band.Uno")]
+[assembly: InternalsVisibleTo("Microsoft.Band")]
