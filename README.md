@@ -8,24 +8,19 @@ MSBandCompanionApp :: my fork of MicrosoftBandDev/companion-app solution
 Microsoft Band. Planned as multi-platform app (I m start to port the code into Xamarin Form,,,). Draft / Not ready yet.
 
 
-## Screenshots
-
-![Screenshot 1](Images/shot1.png)
-![Screenshot 2](Images/shot2.png)
-
 
 ## Tech. moments
 
-- W10M compatibility started to realize... :)
+- W10M compatibility started for/to realize... 
 - Win. os build: 15063 (!)
 
 
 ## Status
 
-- R.E. +- 50%
-- Design - 5%
-- Tech. project - 25 %
-- Dev - 20%
+- R.E. +- 55%
+- Design - 10%
+- Tech. project - 35 %
+- Dev - 25%
 - Intro 0%
 
 
