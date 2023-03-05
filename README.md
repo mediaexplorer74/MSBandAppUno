@@ -1,47 +1,36 @@
-# MSBandCompanionApp
+# MSBandCompanionApp (project restart)
+Multi-platform Microsoft Band 2 (MSFTBandApp codename) companion app, superlite version without any great design. Draft/Proto.
 
-MSBandCompanionApp :: my fork of MicrosoftBandDev/companion-app solution
+Dev. engine: Xamarin Forms 
 
-
-## About the original
-
-Microsoft Band. Planned as multi-platform app (I m start to port the code into Xamarin Form,,,). Draft / Not ready yet.
-
-
-
-## Tech. moments
-
-- W10M compatibility started for/to realize... 
-- Win. os build: 15063 (!)
+![Shot](Images/shot1.png)
 
 
 ## Status
+- UWP / Android / iOS "platforms"
+- Min. W10M os build descreased from 16299 to 15063 (hello, W10M)
+- .net standard decreased from 2.0 to 1.4
+- UWP platform: Bluetooth DI ready (proto)
+- Android platform:  Bluetooth DI started to architect :)
+- iOS platform:  Bluetooth DI is not ready at all 
 
-- R.E. +- 55%
-- Design - 10%
-- Tech. project - 35 %
-- Dev - 25%
-- Intro 0%
+## Problem
+MS decided to "switch off" the MS Health "cloud" sync at Microsoft Band data. 
+Date (year): 2020.
 
+MS Band app for W10M planned to use One Drive to syncing "health" data via Microsoft Graph.
 
-## Bugs / Problems
- 
-- Huge codebase. 
-- Idk all solution architecture... RnD takes a lot of time.
-- The code partially decompiled :( 
-- Dramatic Blootooth lib uncompatibility with Android platform, so, no multi-platform right now (only UWP...)
+## Goal
+Try to reilize/assemble the smalest (simplified) "remake" of Microsoft Band UWP app (W10M).
 
+## References (base of my work) 
 
-## References
+https://docs.microsoft.com/en-us/graph/use-the-api
 
-https://github.com/MicrosoftBandDev/companion-app
-
+https://docs.microsoft.com/en-us/graph/api/resources/todo-overview?view=graph-rest-1.0
 
 ## ..
+AS IS. No support. RnD only / DIY
 
-AS IS. MIT Licence. No support. DIY
-
-
-## .
-
-[m][e] 2022
+##
+[m][e] 2022--2023
