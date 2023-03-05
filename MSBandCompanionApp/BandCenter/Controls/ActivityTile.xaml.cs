@@ -10,7 +10,7 @@ using Xamarin.Forms;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace BandCenter.Controls
+namespace BandCenter.Controls  
 {
 
     public sealed partial class ActivityTile : ContentView//Control
@@ -65,8 +65,15 @@ namespace BandCenter.Controls
 
         public string Subtitle
         {
-            get => (string)GetValue(SubtitleProperty);
-            set => SetValue(SubtitleProperty, value);
+            get
+            {
+                return (string)GetValue(SubtitleProperty);
+            }
+
+            set
+            {
+                SetValue(SubtitleProperty, value);
+            }
         }
 
 
@@ -74,8 +81,8 @@ namespace BandCenter.Controls
         {
             try
             {
-                //(bindable as ActivityTile).NumericLabel1.Text = Convert.ToString(newValue);
-                (bindable as ActivityTile).NumericLabel1.Text = "Test";//Convert.ToString(newValue);
+                (bindable as ActivityTile).NumericLabel1.Text = Convert.ToString(newValue);
+                //(bindable as ActivityTile).NumericLabel1.Text = "Test";//Convert.ToString(newValue);
             }
             catch (Exception ex)
             {

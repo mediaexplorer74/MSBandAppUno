@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using System.Resources;
@@ -88,3 +89,4 @@ using System.Runtime.InteropServices;
 
 [assembly: InternalsVisibleTo("Microsoft.Band.Maui")]
 [assembly: InternalsVisibleTo("Microsoft.Band")]
+*/

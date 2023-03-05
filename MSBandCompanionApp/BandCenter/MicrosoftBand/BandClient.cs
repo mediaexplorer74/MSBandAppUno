@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿// BandClient.cs
 // Type: Microsoft.Band.BandClient
 // Assembly: Microsoft.Band, Version=1.3.20517.1, Culture=neutral, PublicKeyToken=null
 // MVID: AFCBFE03-E2CF-481D-86F4-92C60C36D26A
@@ -43,7 +43,8 @@ namespace Microsoft.Band
         private Queue<BandTileEventBase> tileEventQueue = new();
         private Guid? currentAppId;
         private Dictionary<Guid, bool> tileIdOwnership = new();
-        private static readonly BandSensorSampleDeserializer[] BandSensorSampleDeserializerTable = BandSensorSampleDeserializer.InitDeserializerTable();
+        private static readonly BandSensorSampleDeserializer[] 
+            BandSensorSampleDeserializerTable = BandSensorSampleDeserializer.InitDeserializerTable();
         internal AccelerometerSensor accelerometer;
         internal GyroscopeSensor gyroscope;
         internal DistanceSensor distance;
@@ -64,24 +65,31 @@ namespace Microsoft.Band
 
         protected bool Disposed => disposed;
 
-        internal BandClient(IDeviceTransport deviceTransport, ILoggerProvider loggerProvider, IApplicationPlatformProvider applicationPlatformProvider)
+        internal BandClient(IDeviceTransport deviceTransport, 
+            ILoggerProvider loggerProvider,
+            IApplicationPlatformProvider applicationPlatformProvider)
         {
             this.deviceTransport = deviceTransport;
             this.loggerProvider = loggerProvider;
-            this.applicationPlatformProvider = applicationPlatformProvider ?? throw new ArgumentNullException(nameof(applicationPlatformProvider));
+            this.applicationPlatformProvider = applicationPlatformProvider 
+                ?? throw new ArgumentNullException(nameof(applicationPlatformProvider));
             disposed = false;
             protocolLock = new object();
             cachedThings = new CachedThings(this);
             if (this.deviceTransport == null)
                 return;
-            this.deviceTransport.Disconnected += new EventHandler<TransportDisconnectedEventArgs>(DeviceTransport_Disconnected);
+            this.deviceTransport.Disconnected 
+                += new EventHandler<TransportDisconnectedEventArgs>(DeviceTransport_Disconnected);
         }
 
         internal FirmwareApp FirmwareApp => runningFirmwareApp;
 
         internal CargoVersions FirmwareVersions { get; private set; }
 
-        internal BandTypeConstants BandTypeConstants => FirmwareVersions.ApplicationVersion.PCBId < 20 ? BandTypeConstants.Cargo : BandTypeConstants.Envoy;
+        internal BandTypeConstants BandTypeConstants => 
+            FirmwareVersions.ApplicationVersion.PCBId < 20 
+            ? BandTypeConstants.Cargo 
+            : BandTypeConstants.Envoy;
 
         public IBandNotificationManager NotificationManager => this;
 
@@ -97,13 +105,21 @@ namespace Microsoft.Band
             FirmwareVersions = GetFirmwareVersionsFromBand();
         }
 
-        public Task<string> GetFirmwareVersionAsync() => GetFirmwareVersionAsync(CancellationToken.None);
+        public Task<string> GetFirmwareVersionAsync() 
+            => GetFirmwareVersionAsync(CancellationToken.None);
 
-        public Task<string> GetFirmwareVersionAsync(CancellationToken token) => Task.FromResult(string.Format("{0:0}.{1:0}.{2:0}.{3:0}", FirmwareVersions.ApplicationVersion.VersionMajor, FirmwareVersions.ApplicationVersion.VersionMinor, FirmwareVersions.ApplicationVersion.BuildNumber, FirmwareVersions.ApplicationVersion.Revision));
+        public Task<string> GetFirmwareVersionAsync(CancellationToken token) 
+            => Task.FromResult(string.Format("{0:0}.{1:0}.{2:0}.{3:0}", 
+                FirmwareVersions.ApplicationVersion.VersionMajor, 
+                FirmwareVersions.ApplicationVersion.VersionMinor, 
+                FirmwareVersions.ApplicationVersion.BuildNumber, 
+                FirmwareVersions.ApplicationVersion.Revision));
 
-        public Task<string> GetHardwareVersionAsync() => GetHardwareVersionAsync(CancellationToken.None);
+        public Task<string> GetHardwareVersionAsync() 
+            => GetHardwareVersionAsync(CancellationToken.None);
 
-        public Task<string> GetHardwareVersionAsync(CancellationToken token) => Task.FromResult(FirmwareVersions.ApplicationVersion.PCBId.ToString());
+        public Task<string> GetHardwareVersionAsync(CancellationToken token) 
+            => Task.FromResult(FirmwareVersions.ApplicationVersion.PCBId.ToString());
 
         protected abstract void OnDisconnected(TransportDisconnectedEventArgs args);
 
@@ -117,9 +133,11 @@ namespace Microsoft.Band
         internal FirmwareApp GetRunningFirmwareAppFromBand()
         {
             loggerProvider.Log(ProviderLogLevel.Verbose, "Retrieving running firmware app");
-            using CargoCommandReader cargoCommandReader = ProtocolBeginRead(DeviceCommands.CargoCoreModuleWhoAmI, 1, CommandStatusHandling.DoNotCheck);
+            using CargoCommandReader cargoCommandReader = ProtocolBeginRead(
+                DeviceCommands.CargoCoreModuleWhoAmI, 1, CommandStatusHandling.DoNotCheck);
             int num = cargoCommandReader.ReadByte();
-            CheckStatus(cargoCommandReader.CommandStatus, CommandStatusHandling.ThrowOnlySeverityError, loggerProvider);
+            CheckStatus(cargoCommandReader.CommandStatus, CommandStatusHandling.ThrowOnlySeverityError, 
+                loggerProvider);
             return (FirmwareApp)num;
         }
 
@@ -132,11 +150,14 @@ namespace Microsoft.Band
             int bytesToRead = CargoVersion.GetSerializedByteCount() * 3;
             try
             {
-                using CargoCommandReader cargoCommandReader = ProtocolBeginRead(DeviceCommands.CargoCoreModuleGetVersion, bytesToRead, CommandStatusHandling.DoNotCheck);
+                using CargoCommandReader cargoCommandReader = ProtocolBeginRead(
+                    DeviceCommands.CargoCoreModuleGetVersion, bytesToRead, 
+                    CommandStatusHandling.DoNotCheck);
                 for (int index = 0; index < 3; ++index)
                 {
                     CargoVersion cargoVersion = CargoVersion.DeserializeFromBand(cargoCommandReader);
-                    if (string.IsNullOrWhiteSpace(cargoVersion.AppName) || cargoVersion.VersionMajor == 0)
+                    if (string.IsNullOrWhiteSpace(cargoVersion.AppName) 
+                        || cargoVersion.VersionMajor == 0)
                     {
                         InvalidDataException invalidDataException = new(BandResources.InvalidAppAmount);
                         loggerProvider.LogException(ProviderLogLevel.Error, invalidDataException);
@@ -150,7 +171,9 @@ namespace Microsoft.Band
                             if (appName == "App")
                                 cargoVersions.ApplicationVersion = cargoVersion;
                             else
-                                throw new InvalidDataException($"Firmware version name \"{cargoVersion.AppName}\" read from the device was not recognized.");
+                                throw new InvalidDataException(
+                                    $"Firmware version name \"{cargoVersion.AppName}\" " +
+                                    $"read from the device was not recognized.");
                         }
                         else
                             cargoVersions.UpdaterVersion = cargoVersion;
@@ -158,7 +181,8 @@ namespace Microsoft.Band
                     else
                         cargoVersions.BootloaderVersion = cargoVersion;
                 }
-                CheckStatus(cargoCommandReader.CommandStatus, CommandStatusHandling.ThrowOnlySeverityError, loggerProvider);
+                CheckStatus(cargoCommandReader.CommandStatus, 
+                    CommandStatusHandling.ThrowOnlySeverityError, loggerProvider);
             }
             catch (BandIOException ex)
             {
@@ -181,8 +205,12 @@ namespace Microsoft.Band
                 w.WriteByte(reserved);
                 w.WriteUInt16(3);
             }
-            if ((int)ProtocolWriteWithArgs(DeviceCommands.CargoCoreModuleSdkCheck, 4, writeArgBuf, statusHandling: CommandStatusHandling.DoNotThrow).Status != (int)DeviceStatusCodeUtils.Success)
+            if ((int)ProtocolWriteWithArgs(DeviceCommands.CargoCoreModuleSdkCheck, 4, writeArgBuf,
+                statusHandling: CommandStatusHandling.DoNotThrow).Status !=
+                (int)DeviceStatusCodeUtils.Success)
+            {
                 throw new BandException(BandResources.SdkVersionNotSupported);
+            }
         }
 
         internal void CheckIfDisposed()

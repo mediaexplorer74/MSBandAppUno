@@ -7,10 +7,11 @@
        
     <StackLayout>
 
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <!--Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" 
                    TextColor="White" FontSize="Large"/>
-        </Frame>
+        </Frame-->
+        
         <!--Label Text="Start developing now" FontSize="Large" />
         
         <Label Text="Make changes to your XAML file. Give it a try!" 
@@ -42,7 +43,7 @@
                
         </controls:ActivityTile>
 
-        <!--controls:ActivityTile x:Name="SleepTile" 
+        <controls:ActivityTile x:Name="SleepTile" 
                                Subtitle="Actual sleep"
                                MetricMarkup="loading...">
                 
@@ -58,7 +59,7 @@
                                Subtitle="Workout"
                                MetricMarkup="loading...">
                
-        </controls:ActivityTile-->       
+        </controls:ActivityTile>       
         
       
    </StackLayout>
