@@ -34,7 +34,15 @@ namespace BandCenter.Uno
 
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            IBandInfo[] pairedBands = await BandClientManager.Instance.GetBandsAsync();
+            
+            IBandInfo[] pairedBands = null;
+
+            try
+            {
+                pairedBands = await BandClientManager.Instance.GetBandsAsync();
+            }
+            catch { }
+
             if (pairedBands == null || pairedBands.Length == 0)
                 return;
 
@@ -60,7 +68,8 @@ namespace BandCenter.Uno
                 WorkoutTile.MetricMarkup = $"{lastWorkout.Calories:N0}<s>cals</s>";
 
                 // check current user heart rate consent
-                if (bandClient.SensorManager.HeartRate.GetCurrentUserConsent() != UserConsent.Granted)
+                if (bandClient.SensorManager.HeartRate.GetCurrentUserConsent() 
+                    != UserConsent.Granted)
                 {
                     // user hasn’t consented, request consent
                     await bandClient.SensorManager.HeartRate.RequestUserConsentAsync();
@@ -82,6 +91,7 @@ namespace BandCenter.Uno
                 await bandClient.SensorManager.HeartRate.StopReadingsAsync();
                 return;
 
+                //RnD
                 var strip = await bandClient.GetStartStripAsync();
                 var defaultTiles = bandClient.GetDefaultTiles();
                 foreach (var tile in defaultTiles)
@@ -93,6 +103,7 @@ namespace BandCenter.Uno
                 await bandClient.SetStartStripAsync(strip);
                 return;
 
+                //RnD
                 await bandClient.SendSmsNotificationAsync(10,
                     "Test Message",
                     "Howdy from the Admin SDK!",
@@ -102,13 +113,13 @@ namespace BandCenter.Uno
             catch (BandAccessDeniedException ex)
             {
                 // Handle a Band connection exception
-                System.Diagnostics.Debug.WriteLine("Missing Bluetooth access");
+                System.Diagnostics.Debug.WriteLine("Missing Bluetooth access: " + ex.Message);
             }
             catch (BandException ex)
             {
                 // Handle a Band connection exception
-                System.Diagnostics.Debug.WriteLine(ex);
+                System.Diagnostics.Debug.WriteLine("BandException: "+ ex.Message);
             }
-        }
+        }//MainPage_Loaded
     }
 }

@@ -11,7 +11,7 @@
   <Identity
     Name="ME.BandCenter1"
     Publisher="CN=Admin"
-    Version="1.0.1.0" />
+    Version="1.0.11.0" />
 
   <mp:PhoneIdentity PhoneProductId="0d1df852-8b24-4f54-b28a-2461a75728e7" PhonePublisherId="00600007-0024-0000-0000-000000000400"/>
 

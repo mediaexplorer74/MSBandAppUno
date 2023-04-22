@@ -2,6 +2,7 @@
 
 A "lite/partial replacement" of the Microsoft Health app for Microsoft Band 1/2
 
+## Screenshots
 ![Shot1](Images/shot1.png)
 ![Shot2](Images/shot2.png)
 
@@ -21,9 +22,9 @@ You need Visual Studio 2022 *Preview* to assemble (build) my solution.
 
   16299->15063 & 2 .Uno sub-projects cut off (I merged them with UWP); 
   
-  W11 was ok but I demaged it a littly; 
+  W11 - installed& runned ok (icon cut-off)
   
-  W10M - installed ok, but failed to start
+  W10M - installed& runned ok (icon cut-off)
 
 - Android "target": persists, but not tested
 

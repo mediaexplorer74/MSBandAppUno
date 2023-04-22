@@ -2,44 +2,62 @@
     x:Class="BandCenter.Uno.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:BandCenter.Uno"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:BandCenter.Uno.Controls"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:BandCenter.Uno"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
 
     <ScrollViewer>
-        <StackPanel Spacing="2">
-            <controls:ActivityTile x:Name="StepsTile" Subtitle="Steps"
-                                   MetricMarkup="loading...">
-                <controls:ActivityTile.Icon>
-                    <FontIconSource Glyph="&#xE008;" FontSize="32" FontFamily="{ThemeResource KSymbolFontFamily}"/>
-                </controls:ActivityTile.Icon>
+        <StackPanel>
+            <controls:ActivityTile
+                x:Name="StepsTile"
+                MetricMarkup="loading..."
+                Subtitle="Steps">
+                <!--controls:ActivityTile.Icon>
+                    <FontIconSource Glyph="&#xE008;"
+                        FontSize="32"
+                        FontFamily="{ThemeResource KSymbolFontFamily}"/>
+                </controls:ActivityTile.Icon-->
             </controls:ActivityTile>
-            <controls:ActivityTile x:Name="HeartRateTile" Subtitle="Heart rate"
-                                   MetricMarkup="[not recording]">
-                <controls:ActivityTile.Icon>
-                    <FontIconSource Glyph="&#xE006;" FontSize="32" FontFamily="{ThemeResource KSymbolFontFamily}"/>
-                </controls:ActivityTile.Icon>
+            <controls:ActivityTile
+                x:Name="HeartRateTile"
+                MetricMarkup="[not recording]"
+                Subtitle="Heart rate">
+                <!--controls:ActivityTile.Icon>
+                    <FontIconSource
+                        FontFamily="{ThemeResource KSymbolFontFamily}"
+                        FontSize="32"
+                        Glyph="&#xE006;" />
+                </controls:ActivityTile.Icon-->
             </controls:ActivityTile>
-            <controls:ActivityTile x:Name="SleepTile" Subtitle="Actual sleep"
-                                   MetricMarkup="loading...">
-                <controls:ActivityTile.Icon>
-                    <FontIconSource Glyph="&#xE005;" FontSize="32" FontFamily="{ThemeResource KSymbolFontFamily}"/>
-                </controls:ActivityTile.Icon>
+            <controls:ActivityTile
+                x:Name="SleepTile"
+                MetricMarkup="loading..."
+                Subtitle="Actual sleep">
+                <!--controls:ActivityTile.Icon>
+                    <FontIconSource Glyph="&#xE005;" FontSize="32"
+                        FontFamily="{ThemeResource KSymbolFontFamily}"/>
+                </controls:ActivityTile.Icon-->
             </controls:ActivityTile>
-            <controls:ActivityTile x:Name="RunTile" Subtitle="Run"
-                                   MetricMarkup="loading...">
-                <controls:ActivityTile.Icon>
-                    <FontIconSource Glyph="&#xE004;" FontSize="32" FontFamily="{ThemeResource KSymbolFontFamily}"/>
-                </controls:ActivityTile.Icon>
+            <controls:ActivityTile
+                x:Name="RunTile"
+                MetricMarkup="loading..."
+                Subtitle="Run">
+                <!--controls:ActivityTile.Icon>
+                    <FontIconSource Glyph="&#xE004;" FontSize="32"
+                        FontFamily="{ThemeResource KSymbolFontFamily}"/>
+                </controls:ActivityTile.Icon-->
             </controls:ActivityTile>
-            <controls:ActivityTile x:Name="WorkoutTile" Subtitle="Workout"
-                                   MetricMarkup="loading...">
-                <controls:ActivityTile.Icon>
-                    <FontIconSource Glyph="&#xE002;" FontSize="32" FontFamily="{ThemeResource KSymbolFontFamily}"/>
-                </controls:ActivityTile.Icon>
+            <controls:ActivityTile
+                x:Name="WorkoutTile"
+                MetricMarkup="loading..."
+                Subtitle="Workout">
+                <!--controls:ActivityTile.Icon>
+                    <FontIconSource Glyph="&#xE002;" FontSize="32"
+                        FontFamily="{ThemeResource KSymbolFontFamily}"/>
+                </controls:ActivityTile.Icon-->
             </controls:ActivityTile>
         </StackPanel>
     </ScrollViewer>

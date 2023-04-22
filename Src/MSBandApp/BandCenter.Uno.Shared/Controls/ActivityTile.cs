@@ -1,5 +1,11 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using System;
+using System.Text.RegularExpressions;
+using Windows.UI.Text;
+//using Windows.UI.Xaml;
+//using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Documents;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -21,7 +27,8 @@ namespace BandCenter.Uno.Controls
             set => SetValue(SubtitleProperty, value);
         }
 
-        public static readonly DependencyProperty MetricMarkupProperty = DependencyProperty.Register(
+        public static readonly DependencyProperty MetricMarkupProperty 
+            = DependencyProperty.Register(
             nameof(MetricMarkup), typeof(string), typeof(ActivityTile), new(string.Empty));
         public string MetricMarkup
         {
@@ -29,7 +36,8 @@ namespace BandCenter.Uno.Controls
             set => SetValue(MetricMarkupProperty, value);
         }
 
-        public static readonly DependencyProperty IconProperty = DependencyProperty.Register(
+        public static readonly DependencyProperty IconProperty 
+            = DependencyProperty.Register(
             nameof(Icon), typeof(IconSource), typeof(ActivityTile), new(null));
         public IconSource Icon
         {

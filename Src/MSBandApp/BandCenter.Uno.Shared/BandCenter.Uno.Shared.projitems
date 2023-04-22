@@ -18,7 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\ActivityTile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ActivityTile.cs"/> 
     <Compile Include="$(MSBuildThisFileDirectory)Controls\MetricMarkupPresenter.xaml.cs">
       <DependentUpon>MetricMarkupPresenter.xaml</DependentUpon>
     </Compile>
@@ -59,7 +59,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </_Globbled_Page>
-    <Page Include="@(_Globbled_Page)" />
+    <Page Include="@(_Globbled_Page)">
+      <SubType>Designer</SubType>
+    </Page>
     <_Globbed_Compile Include="$(MSBuildThisFileDirectory)**/*.xaml.cs" Exclude="@(Compile)">
       <DependentUpon>%(Filename)</DependentUpon>
     </_Globbed_Compile>
@@ -69,5 +71,16 @@
     <PRIResource Include="@(_Globbed_PRIResource)" />
     <_Globbed_Content Include="$(MSBuildThisFileDirectory)Assets/**/*.*" Exclude="@(Content)" />
     <Content Include="@(_Globbed_Content)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="C:\Users\Admin\source\repos\MSBandAppUno\Src\MSBandApp\BandCenter.Uno.Shared\Controls\MetricMarkupPresenter - Копировать.xaml.cs">
+      <DependentUpon>MetricMarkupPresenter.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="C:\Users\Admin\source\repos\MSBandAppUno\Src\MSBandApp\BandCenter.Uno.Shared\Controls\MetricMarkupPresenter - Копировать.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
