@@ -1,6 +1,6 @@
-# MS Band Companion App rework (Band Center)
+# MSBandAppUno (Band Center codename; MS Band Companion App rework)
 
-A replacement of the Microsoft Health app for Microsoft Band 1/2
+A "lite/partial replacement" of the Microsoft Health app for Microsoft Band 1/2
 
 ![Shot1](Images/shot1.png)
 ![Shot2](Images/shot2.png)
