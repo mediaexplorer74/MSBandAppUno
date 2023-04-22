@@ -1,36 +1,36 @@
-# MSBandCompanionApp (project restart)
-Multi-platform Microsoft Band 2 (MSFTBandApp codename) companion app, superlite version without any great design. Draft/Proto.
+# MS Band Companion App rework (Band Center)
 
-Dev. engine: Xamarin Forms 
+A replacement of the Microsoft Health app for Microsoft Band 1/2
 
-![Shot](Images/shot1.png)
+![Shot1](Images/shot1.png)
+![Shot2](Images/shot2.png)
 
+## Building the project
+My fork of ["Band Center" solution](https://github.com/MicrosoftBandDev/companion-app) uses UNO "framework", 
+which is still in the preview stages... 
+
+Once you have the development environment set up, you're ready to clone the repo.
+```bash
+git clone --recursive https://github.com/mediaexplorer74/MSBandCompanionApp
+```
+
+You need Visual Studio 2022 *Preview* to assemble (build) my solution.
 
 ## Status
-- UWP / Android / iOS "platforms"
-- Min. W10M os build descreased from 16299 to 15063 (hello, W10M)
-- .net standard decreased from 2.0 to 1.4
-- UWP platform: Bluetooth DI ready (proto)
-- Android platform:  Bluetooth DI started to architect :)
-- iOS platform:  Bluetooth DI is not ready at all 
+- UWP "target" : 
 
-## Problem
-MS decided to "switch off" the MS Health "cloud" sync at Microsoft Band data. 
-Date (year): 2020.
+  16299->15063 & 2 .Uno sub-projects cut off (I merged them with UWP); 
+  
+  W11 was ok but I demaged it a littly; 
+  
+  W10M - installed ok, but failed to start
 
-MS Band app for W10M planned to use One Drive to syncing "health" data via Microsoft Graph.
+- Android "target": persists, but not tested
 
-## Goal
-Try to reilize/assemble the smalest (simplified) "remake" of Microsoft Band UWP app (W10M).
-
-## References (base of my work) 
-
-https://docs.microsoft.com/en-us/graph/use-the-api
-
-https://docs.microsoft.com/en-us/graph/api/resources/todo-overview?view=graph-rest-1.0
+- iOS, MACOS, Tizen, WASM are only "stubs" 
 
 ## ..
-AS IS. No support. RnD only / DIY
+AS IS. No support. DIY
 
-##
-[m][e] 2022--2023
+## .
+[m][e] 2023
